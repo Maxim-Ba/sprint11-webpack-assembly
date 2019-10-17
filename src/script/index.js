@@ -8,7 +8,7 @@ import {Popup} from './classes.js';
 
 
 //--variables--
-
+const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk/название_группы' : 'https://praktikum.tk/название_группы'
 const button = document.querySelector('.user-info__button');
 const userPhoto = document.querySelector('.user-info__photo');
 const imageClose = document.querySelectorAll('.popup__close')[2];
@@ -32,7 +32,7 @@ const popupProfile = document.querySelector('.popup-profile');
 const popupEditingPrifile = new Popup(popupProfile)//-------------------------Popup class
 const formNew = document.forms.new;
 const formNewTwo = document.forms.newtwo;
-const SERVER_ADRESS = 'http://95.216.175.5/cohort3/';
+const SERVER_ADRESS = 'serverUrl' + '/cohort3/';
 const TOKEN = 'df5f3abf-3709-47bb-a7ec-6a95c96af683';
 const apiReqest = new Api({                //-------------------------Api class
     baseUrl: SERVER_ADRESS,

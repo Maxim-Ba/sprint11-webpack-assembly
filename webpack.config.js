@@ -1,7 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackMd5Hash = require('webpack-md5-hash'); // добавили плагин
+const WebpackMd5Hash = require('webpack-md5-hash'); 
+const webpack = require('webpack'); 
 
 module.exports = {
     entry: { main: './src/index.js' },
@@ -9,7 +10,7 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].[chunkhash].js'
     },
-// указали путь к файлу, в квадратных скобках куда вставлять сгенерированный хеш
+
     module: {
         rules: [
             {
@@ -37,11 +38,14 @@ module.exports = {
             template: './src/index.html',
             filename: 'index.html'
         }),
-        new WebpackMd5Hash()
+        new WebpackMd5Hash(),
+        new webpack.DefinePlugin({
+            'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+        })
     ],
     homepage: {
         "name": "...",
-        "homepage": "https://maxim-ba.github.io/traning-project-webpack/", // ссылка на ваш репозиторий
+        "homepage": "https://maxim-ba.github.io/sprint11-webpack-assembly/", 
         "version": "...",
         "description": "..."
         }
