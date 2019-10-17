@@ -3,7 +3,7 @@ import {Api} from './classes.js';
 import {Card} from './classes.js';
 import {CardList} from './classes.js';
 import {Popup} from './classes.js';
-
+import '../pages/index.css'
 // --class--
 
 
