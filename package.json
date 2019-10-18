@@ -36,5 +36,7 @@
     "babel-polyfill": "^6.26.0",
     "cross-env": "^6.0.3",
     "core-js": "^3.1.4"
-  }
+  },
+  "homepage": "https://maxim-ba.github.io/sprint11-webpack-assembly/"
+    
 }

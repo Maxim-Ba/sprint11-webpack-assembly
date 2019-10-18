@@ -6,7 +6,7 @@ const webpack = require('webpack');
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const isDev = process.env.NODE_ENV === 'development';
 const pngquant = require('pngquant-bin');
-
+const ghpages = require('gh-pages');
 module.exports = {
     entry: { main: './src/script/index.js' },
     output: {
@@ -38,7 +38,6 @@ module.exports = {
                     {
                         loader: 'image-webpack-loader'
                     }
-
                 ],
             },
             {
@@ -69,11 +68,6 @@ module.exports = {
             filename: 'index.html'
         }),
         new WebpackMd5Hash()    
-    ],
-    // homepage: {
-    //     "name": "...",
-    //     "homepage": "https://maxim-ba.github.io/sprint11-webpack-assembly/", 
-    //     "version": "...",
-    //     "description": "..."
-    //     }
+    ]
+    
 };
