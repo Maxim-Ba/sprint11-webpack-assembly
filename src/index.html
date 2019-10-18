@@ -10,7 +10,7 @@
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg') %>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -28,7 +28,7 @@
     </div>
     <div class="popup">
       <div class="popup__content">
-        <img src="./images/close.svg" alt="" class="popup__close">
+        <img src="<%=require('./images/close.svg') %>" alt="" class="popup__close">
         <h3 class="popup__title">Новое место</h3>
         <form class="popup__form" name="new">
             <div class="form1">
@@ -45,7 +45,7 @@
     </div>
     <div class="popup-profile">
       <div class="popup__content">
-        <img src="%=require('./images/logo.svg')%" alt="" class="popup__close">
+        <img src="<%=require('./images/logo.svg') %>" alt="" class="popup__close">
         <h3 class="popup__title">Редактировать профиль</h3>
         <form class="popup__form" name="newtwo">
             <div class="form1">
@@ -64,11 +64,11 @@
       <div class="picture__container">
 
           <img class="picture__content" alt="" src="" >
-          <img src="%=require('./images/close.svg')%" alt="" class="popup__close popup__close_position">
+          <img src="<%=require('./images/close.svg') %>" alt="" class="popup__close popup__close_position">
       </div>
 
     </div>
   </div>
 </body>
-<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
+<script type="module" src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
 </html>

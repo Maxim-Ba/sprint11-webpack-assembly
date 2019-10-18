@@ -24,7 +24,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/i,
+                test: /\.css$/,
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader', 
@@ -34,7 +34,7 @@ module.exports = {
             {
                 test: /\.(png|jpg|gif|ico|svg)$/,
                 use: [
-                     'file-loader?name=../images/[name].[ext]', // указали папку, куда складывать изображения
+                    'file-loader?name=../images/[name].[ext]', 
                     {
                         loader: 'image-webpack-loader',
                         options: { }
@@ -54,13 +54,6 @@ module.exports = {
         new MiniCssExtractPlugin({
                 filename: 'style.[contenthash].css'
         }),
-        new HtmlWebpackPlugin({
-            inject: false,
-            hash: true,
-            template: './src/index.html',
-            filename: 'index.html'
-        }),
-        new WebpackMd5Hash(),
         new OptimizeCssAssetsPlugin({
             assetNameRegExp: /\.css$/g,
             cssProcessor: require('cssnano'),
@@ -68,8 +61,14 @@ module.exports = {
                     preset: ['default'],
             },
             canPrint: true
-        })
-        
+        }),
+        new HtmlWebpackPlugin({
+            inject: false,
+            hash: true,
+            template: './src/index.html',
+            filename: 'index.html'
+        }),
+        new WebpackMd5Hash()    
     ],
     // homepage: {
     //     "name": "...",
