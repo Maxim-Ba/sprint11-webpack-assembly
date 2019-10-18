@@ -24,7 +24,7 @@ module.exports = {
                 }
             },
             {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: [
                     (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
                     'css-loader', 
@@ -36,14 +36,14 @@ module.exports = {
                 use: [
                     'file-loader?name=../images/[name].[ext]', 
                     {
-                        loader: 'image-webpack-loader',
-                        options: { }
-                    },
+                        loader: 'image-webpack-loader'
+                    }
+
                 ],
             },
             {
                 test: /\.(eot|ttf|woff|woff2)$/,
-                loader: 'file-loader?name=./vendor/[name].[ext]'
+                loader: 'file-loader?name=./src/vendor/[name].[ext]'
             }
         ]
     },
