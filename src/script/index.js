@@ -1,9 +1,7 @@
 //imports
-// import {Api} from './classes.js';
-// import {Card} from './classes.js';
-// import {CardList} from './classes.js';
-// import {Popup} from './classes.js';
-import '../pages/index.css'
+import {TOKEN, SERVER_ADRESS, formNewTwo, formNew, popupProfile, popup, placesList, pictureContent, picture, userInfoJob, userInfoName, editButtonSave, editButton, linkInput,
+    nameInput, addForm, addButton, imageClose, userPhoto, button} from './variables';
+import '../pages/index.css';
 // --class--
 
 class Api{
@@ -301,35 +299,15 @@ class Popup {
     }
 }
 
-// export {Api, Card, CardList, Popup};
 
-//--variables--
-const serverUrl = NODE_ENV === 'development' ? 'http://praktikum.tk' : 'https://praktikum.tk'
-const button = document.querySelector('.user-info__button');
-const userPhoto = document.querySelector('.user-info__photo');
-const imageClose = document.querySelectorAll('.popup__close')[2];
-const addButton = document.querySelector('.popup__button');
+
+
 addButton.setAttribute('type','submit');
 addButton.setAttribute('disabled', true);
-const addForm = document.forms.new;
-const nameInput = addForm.elements.name;
-const linkInput = addForm.elements.link;
-const editButton = document.querySelector('.button_user-edit');
-const editButtonSave = document.querySelector('.popup__button_font-size');
-const userInfoName = document.querySelector('.user-info__name');
-const userInfoJob = document.querySelector('.user-info__job');
 editButtonSave.setAttribute('type','submit');
-const picture = document.querySelector('.picture')
-const pictureContent = document.querySelector('.picture__content');
-const placesList = document.querySelector('.places-list');
-const popup = document.querySelector('.popup');
+//--variables--
 const popupCreatingCard = new Popup(popup)//-------------------------Popup class
-const popupProfile = document.querySelector('.popup-profile');
 const popupEditingPrifile = new Popup(popupProfile)//-------------------------Popup class
-const formNew = document.forms.new;
-const formNewTwo = document.forms.newtwo;
-const SERVER_ADRESS = serverUrl + '/cohort3/';
-const TOKEN = 'df5f3abf-3709-47bb-a7ec-6a95c96af683';
 const apiReqest = new Api({                //-------------------------Api class
     baseUrl: SERVER_ADRESS,
     headers: {
