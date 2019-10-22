@@ -23,3 +23,4 @@ export const formNew = document.forms.new;
 export const formNewTwo = document.forms.newtwo;
 export const SERVER_ADRESS = serverUrl + '/cohort3/';
 export const TOKEN = 'df5f3abf-3709-47bb-a7ec-6a95c96af683';
+//

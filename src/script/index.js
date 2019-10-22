@@ -204,7 +204,7 @@ class Card {
         } 
         event.stopPropagation();
     }
-    
+    //
     remove(event){
         let isDelite = confirm('Вы действительно хотите удалить эту карточку?')
         if (isDelite) {

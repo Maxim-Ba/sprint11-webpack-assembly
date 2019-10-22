@@ -48,7 +48,7 @@ if (textField.value.length === 0) {
     };
 } else {form.querySelector('.warning').style.display = 'none';}
 }
-
+//
 
 export function changeStatusButton(event) {
 verificationField(event)
